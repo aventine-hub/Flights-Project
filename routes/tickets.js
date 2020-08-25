@@ -5,5 +5,4 @@ const ticketCtrl = require('../controllers/tickets');
 
 router.post('/flights/:id/tickets', ticketCtrl.create);
 
-
 module.exports = router;
