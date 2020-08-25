@@ -10,7 +10,6 @@
     <div>Departs: </div>
     <div><%= flight.departs %></div>
 
-
 </section>
 
 <br />
@@ -35,6 +34,7 @@
 <% } else { %>
 <h5>No Destinations</h5>
 <% } %>
+&nbsp; &nbsp; &nbsp;
 
 <form action="/flights/<%= flight._id %>/destinations" method="POST">
 
@@ -49,6 +49,32 @@
     <label>Arrival:</label>
     <input type="datetime-local" name="arrival" checked /> <br />
     <input type="submit" value="Submit" />
+</form>
+&nbsp; &nbsp; &nbsp;
+<h5>Tickets:</h5>
+<ul>
+    <% if (tickets.length) { %>
+
+    <% tickets.forEach(function(t) { %>
+    <li>
+        Seat: <%= t.seat %> Price: <%= t.price %>
+    </li>
+    <% }); %>
+    <% }%>
+</ul>
+
+<form method="POST" action="/flights/<%= flight._id %>/tickets">
+    <div>
+        <label>Seat No:
+            <input type="text" name="seat"></input>
+        </label><br>
+        <label>Price: $
+            <input type="text" name="price"></input>
+        </label><br><br>
+
+        <input type="submit" value="Add Ticket">
+
+    </div>
 </form>
 
 <%- include('../partials/footer') %>

@@ -34,7 +34,8 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E8ECEB;
+  background-image: url(https://i.imgur.com/IVufQGC.png);
+  background-size: cover;
   padding: 20px;
   overflow-y: scroll;
 }
@@ -116,6 +117,10 @@ table td {
 
 #show-page div:nth-child(even) {
   font-weight: bold;
+}
+
+li {
+  list-style: none;
 }
 
  
