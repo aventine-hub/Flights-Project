@@ -24,12 +24,6 @@ body > nav {
   padding: 0 20px 0 30px;
 }
 
-/* nav > img {
-  width: 34px;
-  object-fit: contain;
-  margin-right: auto;
-} */
-
 body > main {
   grid-area: main;
   display: flex;
@@ -132,10 +126,6 @@ input, select {
 
 #show-page div:nth-child(even) {
   font-weight: bold;
-}
-
-li {
-  list-style: none;
 }
 
  
